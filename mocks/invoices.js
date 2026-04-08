@@ -1,6 +1,5 @@
-const {customers} = require('./customers');
-
-const invoices = [
+import {customers} from './customers.js';
+export const invoices = [
 	{
 		customer_id: customers[0].id,
 		amount: 15795,
@@ -92,7 +91,3 @@ const invoices = [
 		date: '2022-06-05',
 	},
 ];
-
-module.exports = {
-	invoices,
-}
