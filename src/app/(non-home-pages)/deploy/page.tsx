@@ -1,0 +1,15 @@
+import React from 'react';
+import { getArticles } from '@/server/db/article/getArticles';
+
+export const dynamic = 'force-dynamic';
+
+export default async function Deploy() {
+  const articles = await getArticles();
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <h2 className="text-4xl">Deploy</h2>
+      <p>You have {articles.length} articles</p>
+    </div>
+
+  );
+}
